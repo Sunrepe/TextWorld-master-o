@@ -45,3 +45,4 @@ if __name__=='__main__':
     # test_making_treasure_hunter_games()
 
     test_hunter_game_play(10)
+    # test GitHub collaboration
