@@ -243,7 +243,7 @@ def compile_game(game: Game, options: Optional[GameOptions] = None):
 
     # TODO: zxf -start
     # write source to data for inform7 test
-    filename = 'cooking'
+    filename = 'textworld'
     game_source = pjoin(folder, 'source_data_'+filename + ".txt")
     print('game_source_file: ', game_source)
     with open(game_source, "w") as f:

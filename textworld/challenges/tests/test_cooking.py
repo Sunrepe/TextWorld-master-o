@@ -13,8 +13,8 @@ import os
 
 NB_TRIALS = 10
 
-
 def test_making_cooking_games():
+    print('ccc')
     options = textworld.GameOptions()
     options.seeds = 1234
     options.file_ext = ".z8"
@@ -24,6 +24,7 @@ def test_making_cooking_games():
     settings = {
         "recipe": nb_ingredients,
         "take": 3,
+        "open": True,
         "open": True,
         "cook": True,
         "cut": False,
@@ -35,31 +36,33 @@ def test_making_cooking_games():
 
     game = cooking.make(settings, options)
     assert len(game.metadata["ingredients"]) == nb_ingredients
-
-    # Change only the recipe.
-    options = textworld.GameOptions()
-    options.seeds = 1234
-    options.file_ext = ".z8"
-    # TODO: zxf -s3336133
-    options.path = './tw_game_env/'
-    if os.path.exists(options.path):
-        shutil.rmtree(options.path)
-    # zxf -e
-    settings["recipe_seed"] = 321
-    game2 = cooking.make(settings, options)
-
-    # Recipe's ingredients should be different.
-    assert game.metadata["ingredients"] != game2.metadata["ingredients"]
-    assert game.metadata["entities"] == game2.metadata["entities"]
-
-    # The rest of the world should stay the same.
-    POSITIONNING_FACTS = ("in", "on", "at", "west_of", "east_of", "south_of", "north_of")
-    differing_facts = set(game.world.facts) - set(game2.world.facts)
-    assert [pred for pred in differing_facts if pred.name in POSITIONNING_FACTS] == []
+    #
+    # # Change only the recipe.
+    # options = textworld.GameOptions()
+    # options.seeds = 1234
+    # options.file_ext = ".z8"
+    # # TODO: zxf -s
+    # options.path = './tw_game_env/'
+    # if os.path.exists(options.path):
+    #     shutil.rmtree(options.path)
+    # # zxf -e
+    #
+    # settings["recipe_seed"] = 321
+    # game2 = cooking.make(settings, options)
+    #
+    # # Recipe's ingredients should be different.
+    # assert game.metadata["ingredients"] != game2.metadata["ingredients"]
+    # assert game.metadata["entities"] == game2.metadata["entities"]
+    #
+    # # The rest of the world should stay the same.
+    # POSITIONNING_FACTS = ("in", "on", "at", "west_of", "east_of", "south_of", "north_of")
+    # differing_facts = set(game.world.facts) - set(game2.world.facts)
+    # assert [pred for pred in differing_facts if pred.name in POSITIONNING_FACTS] == []
 
     # Check the game can be completed by following the walkthrough.
     with make_temp_directory() as tmpdir:
         options.path = tmpdir
+
         # TODO: zxf -s
         options.path = './tw_game_env/'
         if os.path.exists(options.path):
@@ -67,6 +70,7 @@ def test_making_cooking_games():
         # zxf -e
 
         game_file = textworld.generator.compile_game(game, options)
+        print('bbb')
         textworld.play(game_file)
         # infos = EnvInfos(admissible_commands=True, policy_commands=True)
         #
@@ -119,4 +123,5 @@ def test_making_cooking_games():
 
 
 if __name__ == '__main__':
+    print('aaa')
     test_making_cooking_games()
