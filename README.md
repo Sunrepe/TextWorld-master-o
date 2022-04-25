@@ -1,6 +1,6 @@
 # TextWorld
 
-zxf test
+zxf test2
 
 A text-based game generator and extensible sandbox learning environment for training and testing reinforcement learning (RL) agents. Also check out [aka.ms/textworld](https://aka.ms/textworld/) for more info about TextWorld and its creators. Have questions or feedback about TextWorld? Send them to textworld@microsoft.com or use the Gitter channel listed above.
 
