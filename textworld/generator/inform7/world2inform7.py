@@ -459,14 +459,6 @@ class Inform7Game:
             say "                      | $$   | $$     \| $$  | $$   | $$          [line break]";
             say "                       \$$    \$$$$$$$$ \$$   \$$    \$$          [line break]";
             say "              __       __   ______   _______   __        _______  [line break]";
-            say "             |  \  _  |  \ /      \ |       \ |  \      |       \ [line break]";
-            say "             | $$ / \ | $$|  $$$$$$\| $$$$$$$\| $$      | $$$$$$$\[line break]";
-            say "             | $$/  $\| $$| $$  | $$| $$__| $$| $$      | $$  | $$[line break]";
-            say "             | $$  $$$\ $$| $$  | $$| $$    $$| $$      | $$  | $$[line break]";
-            say "             | $$ $$\$$\$$| $$  | $$| $$$$$$$\| $$      | $$  | $$[line break]";
-            say "             | $$$$  \$$$$| $$__/ $$| $$  | $$| $$_____ | $$__/ $$[line break]";
-            say "             | $$$    \$$$ \$$    $$| $$  | $$| $$     \| $$    $$[line break]";
-            say "              \$$      \$$  \$$$$$$  \$$   \$$ \$$$$$$$$ \$$$$$$$ [line break]";
             say "[variable letter spacing][line break]";
             say "[objective][line break]".
 
