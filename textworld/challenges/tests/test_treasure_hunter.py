@@ -7,7 +7,7 @@ from textworld.challenges import treasure_hunter
 from textworld.utils import make_temp_directory
 from textworld.generator import compile_game
 
-#
+
 # def test_making_treasure_hunter_games():
 #     for level in range(1, 30 + 1):
 #         print('level:{}'.format(level))
@@ -18,10 +18,10 @@ from textworld.generator import compile_game
 #         game = treasure_hunter.make(settings, options)
 #         assert len(game.quests[0].commands) == game.metadata["quest_length"], "Level {}".format(level)
 #         assert len(game.world.rooms) == game.metadata["world_size"], "Level {}".format(level)
-
+#
 
 # TODO: zxf treasure_hunter game source
-def test_hunter_game_play(level=20):
+def test_hunter_game_play(level=2):
     print('level:{}'.format(level))
     options = textworld.GameOptions()
     options.seeds = 1234
@@ -44,4 +44,4 @@ def test_hunter_game_play(level=20):
 if __name__ == '__main__':
     # test_making_treasure_hunter_games()
 
-    test_hunter_game_play(level=20)
+    test_hunter_game_play(level=10)

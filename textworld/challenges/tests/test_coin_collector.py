@@ -28,5 +28,6 @@ def test_making_coin_collector():
     textworld.play(game_file)
 
 
+
 if __name__ == '__main__':
     test_making_coin_collector()

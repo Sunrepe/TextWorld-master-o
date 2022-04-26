@@ -95,7 +95,6 @@ def make(settings: Mapping[str, str], options: Optional[GameOptions] = None) -> 
 
     # Load knowledge base specific to this challenge.
     options.kb = KnowledgeBase.load(KB_PATH)
-    print(KB_PATH)
 
     level = settings["level"]
     if level < 1 or level > 30:
