@@ -827,7 +827,6 @@ def make(settings: Mapping[str, str], options: Optional[GameOptions] = None) -> 
     if settings.get("drop"):
         options.kb = KnowledgeBase.load(logic_path=KB_LOGIC_DROP_PATH, grammar_path=KB_GRAMMAR_PATH)
     else:
-        print('logic: ', KB_LOGIC_PATH, 'grammar: ', KB_GRAMMAR_PATH)  # TODO: zxf /
         options.kb = KnowledgeBase.load(logic_path=KB_LOGIC_PATH, grammar_path=KB_GRAMMAR_PATH)
 
     rngs = options.rngs

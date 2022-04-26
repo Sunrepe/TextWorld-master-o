@@ -18,7 +18,7 @@ def register(name: str, desc: str,
             Function that should add the `argparse` arguments needed for the
             challenge. The provided function should expect a `argparse.ArgumentParser`
             object.
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCcMdnjpoPv6IlFaSrjTCXVXUWFxIo/wal70Q69VPe01jLFM2kbgViT/XG378hUzl/OPPUZwQJCcJadQxeOkr9CFOf2TwZn/lVgtZlhN1MkupXX1WAp58z+X8471xDjxi8sXZiuhGutZGkNzzkMjiut/WMccdOYRprcAW4eMaw9sLQsC585cLbILSRSXR8g3BCufGNyjHyxXt/wGpU1cgv+RmfBkHLdtARODYb9abyOUHfG4Rh5Kxw62hhwXPiNey+2DGl4csf5G9e8o/1ODiyWzJiqYY8IHs2RUKlkVsrB4apgIrptq9kB28EExVuFfaxEsx7x2OnJ0S0l9oFHNXRLJKYdrCzKT/wVxYSZDGskG/PjRJ1HOK5VOj8JFt7EZiWZwN3wVzfC39JfFoh9/swnG4lYyp5aF1jhc8RwHuCNp9Y+zL9YlwT2VWtm6Gbhh9ThooXQjjG6KvsgURHUpHGjWB50TcHIH8mhFv0FRfTkzIJsr28PZ+14tAyJDOl9PbM= bnuzxf@163.com
+
     Example:
 
         >>> from textworld.challenges import register
