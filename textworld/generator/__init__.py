@@ -241,15 +241,6 @@ def compile_game(game: Game, options: Optional[GameOptions] = None):
     game_json = pjoin(folder, filename + ".json")
     game_file = pjoin(folder, filename + ext)
 
-    # TODO: zxf -start
-    # write source to data for inform7 test
-    filename = 'textworld'
-    game_source = pjoin(folder, 'source_data_'+filename + ".txt")
-    print('game_source_file: ', game_source)
-    with open(game_source, "w") as f:
-        f.writelines(source)
-    # zxf -end
-
     already_compiled = False  # Check if game is already compiled.
     if not options.force_recompile and os.path.isfile(game_file) and os.path.isfile(game_json):
         already_compiled = game == Game.load(game_json)
