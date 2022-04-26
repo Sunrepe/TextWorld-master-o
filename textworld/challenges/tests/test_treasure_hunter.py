@@ -5,7 +5,6 @@ import os
 import textworld
 from textworld.challenges import treasure_hunter
 from textworld.utils import make_temp_directory
-from textworld.generator import compile_game
 
 
 # def test_making_treasure_hunter_games():
@@ -29,7 +28,7 @@ def test_hunter_game_play(level=2):
     settings = {"level": level}
     game = treasure_hunter.make(settings, options)
     options.path = './'
-    game_file = compile_game(game, options)
+    game_file = textworld.generator.compile_game(game, options)
     textworld.play(game_file)
 
     # with make_temp_directory(prefix="test_render_wrapper") as tmpdir:
